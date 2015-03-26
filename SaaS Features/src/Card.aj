@@ -1,7 +1,7 @@
 
 public aspect Card {
 	after(): call(void SaaS.checkActivity()){
-		System.out.println( "Cards" ) ; 
+		 System.out.println( "Cards" ) ; 
 	}
 	after(SaaS s): target(s) && call(void SaaS.test()){
 		s.setStatus("New");
